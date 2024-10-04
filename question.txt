@@ -1,0 +1,19 @@
+1.How this function works??
+
+const initialState = {
+  todos: [],
+};
+function todoReducer(state = initialState, action) {
+  if (action.type === ADD_TODO) {
+    return {
+      ...state,
+      todos: [
+        ...state,
+        { id: Date.now(), text: action.payload, completed: false },
+      ],
+    };
+  }
+}
+
+
+2.
